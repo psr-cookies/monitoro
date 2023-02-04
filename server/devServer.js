@@ -3,7 +3,7 @@ const express = require('express')
 const app = express()
 const port = 9000
 const monitoroRouter = require('./router')
-const monitoroQueues = fs.readFileSync('./queues.json', 'utf8');
+const monitoroQueues = fs.readFileSync(process.env.QUEUES_FILE, 'utf8');
 
 app.locals.MonitoroQueues = monitoroQueues
 app.use('/',monitoroRouter)
