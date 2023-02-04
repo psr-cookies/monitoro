@@ -1,0 +1,27 @@
+[
+    { 
+      "name": "Queue1", 
+      "hostId": "redis",
+      "url": "redis://localhost:6379" 
+    },
+    { 
+      "name": "Queue2", 
+      "hostId": "redis",
+      "url": "redis://localhost:6379" 
+    },
+    { 
+      "name": "Queue3", 
+      "hostId": "redis",
+      "url": "redis://localhost:6379" 
+    },
+    { 
+      "name": "Queue4", 
+      "hostId": "redis",
+      "url": "redis://localhost:6379" 
+    },
+    { 
+      "name": "Queue5", 
+      "hostId": "redis",
+      "url": "redis://localhost:6379" 
+    }
+]

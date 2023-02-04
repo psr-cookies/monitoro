@@ -1,35 +1,9 @@
-
+const fs = require('fs');
 const express = require('express')
 const app = express()
 const port = 9000
 const monitoroRouter = require('./router')
-const monitoroQueues = [
-    { 
-      "name": "Queue1", 
-      "hostId": "redis",
-      "url": "redis://localhost:6379" 
-    },
-    { 
-      "name": "Queue2", 
-      "hostId": "redis",
-      "url": "redis://localhost:6379" 
-    },
-    { 
-      "name": "Queue3", 
-      "hostId": "redis",
-      "url": "redis://localhost:6379" 
-    },
-    { 
-      "name": "Queue4", 
-      "hostId": "redis",
-      "url": "redis://localhost:6379" 
-    },
-    { 
-      "name": "Queue5", 
-      "hostId": "redis",
-      "url": "redis://localhost:6379" 
-    }
-]
+const monitoroQueues = fs.readFileSync('./queues.json', 'utf8');
 
 app.locals.MonitoroQueues = monitoroQueues
 app.use('/',monitoroRouter)
